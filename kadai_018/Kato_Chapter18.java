@@ -1,18 +1,26 @@
 package kadai_018;
 
-public class KatoExec_Chapter18 {
-    public static void main(String[] args) {
-        KatoTaro_Chapter18 taro = new KatoTaro_Chapter18();
-        taro.setGivenName();
-        taro.eachIntroduce();
+public abstract class Kato_Chapter18 {
+	
+	public String familyName = "加藤";
+	public String givenName;
+	public String address    = "東京都中野区⚪×";
+	
+	public void setGivenName(String givenName) {
+        this.givenName = givenName;
+	}
+	
+	public void commonIntroduce() {
+		System.out.println("名前は" + familyName + givenName + "です");
+		System.out.println("住所は" + address + "です");
+	}
+	
+	public abstract void eachIntroduce();
+	
+	public void execIntroduce() {
+		commonIntroduce();
+		eachIntroduce();
+	}
 
-        KatoIchiro_Chapter18 ichiro = new KatoIchiro_Chapter18();
-        ichiro.setGivenName();
-        ichiro.eachIntroduce();
-
-        KatoHanako_Chapter18 hanako = new KatoHanako_Chapter18();
-        hanako.setGivenName();
-        hanako.eachIntroduce();
-
-    }
 }
+
