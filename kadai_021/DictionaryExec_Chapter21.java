@@ -8,7 +8,7 @@ public class DictionaryExec_Chapter21 {
 		 String[] wordArray = {"apple" , "banana" , "grape" , "orange"};
 
 		 for(String word : wordArray) {
-			 dictionary.wordPut(word);
+	        System.out.println(dictionary.wordPut(word));
 		 }
 	 }
 
